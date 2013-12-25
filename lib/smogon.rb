@@ -33,3 +33,4 @@ require 'smogon/movedex'
 require 'smogon/movesetdex'
 
 require 'smogon/version'
+require 'smogon/game'
