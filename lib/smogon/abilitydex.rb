@@ -22,7 +22,7 @@ module Smogon
     def self.get(name)
       begin
         name = name.downcase.gsub /\s/, ?_
-        url  = URI::encode "http://www.smogon.com/bw/abilities/#{name}"
+        url  = URI::encode "http://www.smogon.com/#{Smogon::game}/abilities/#{name}"
         
         smogon = Nokogiri::HTML(open(url))
       rescue

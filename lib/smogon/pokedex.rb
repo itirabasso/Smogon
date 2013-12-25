@@ -21,8 +21,8 @@ module Smogon
   class Pokedex
     def self.get(name)    
       begin
-        url       = URI::encode "http://www.smogon.com/bw/pokemon/#{name}"
-        moves_url = URI::encode "http://www.smogon.com/bw/pokemon/#{name}/moves"
+        url       = URI::encode "http://www.smogon.com/#{Smogon::game}/pokemon/#{name}"
+        moves_url = URI::encode "http://www.smogon.com/#{Smogon::game}/pokemon/#{name}/moves"
 
         pokemon = Pokemon.new
         smogon  = Nokogiri::HTML open(url)
